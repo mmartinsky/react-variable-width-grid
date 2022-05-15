@@ -173,11 +173,6 @@
     "@react-hook/passive-layout-effect" "^1.2.0"
     "@react-hook/resize-observer" "^1.2.1"
 
-"@rehooks/component-size@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@rehooks/component-size/-/component-size-1.0.3.tgz#823eabeb42084893d46d43e3a9d1d0e34252b3cb"
-  integrity sha512-pnYld+8SSF2vXwdLOqBGUyOrv/SjzwLjIUcs/4c1JJgR0q4E9eBtBfuZMD6zUD51fvSehSsbnlQMzotSmPTXPg==
-
 "@rushstack/eslint-patch@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.3.tgz#6801033be7ff87a6b7cadaf5b337c9f366a3c4b0"
@@ -1463,12 +1458,12 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-variable-width-grid@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-variable-width-grid/-/react-variable-width-grid-0.1.0.tgz#03184ddacc090dbd96ab7d04a63e610c007b63c5"
-  integrity sha512-i9r2PjPtvmkZoPW0CeNY9bmowoDipeRKWLmVyWTKC/eaxJ/n1fJlmvn5exv3aYauJ7SYzWRBFoJU6e8BocHFjg==
+react-variable-width-grid@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-variable-width-grid/-/react-variable-width-grid-0.1.1.tgz#45afb330c715101a87e4bd1d97edf69ce5269064"
+  integrity sha512-WzJ/3Z2aZyNwx83RGEl8hpzP6W8o2vxWY8+yMqn14LJcs6x7nSiio9Py6WCJH5yIh0d+FpkvNSoQeoB5P+ybog==
   dependencies:
-    use-resize-observer "^8.0.0"
+    "@react-hook/size" "^2.1.2"
 
 react@18.1.0:
   version "18.1.0"
@@ -1720,13 +1715,6 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
-
-use-resize-observer@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/use-resize-observer/-/use-resize-observer-8.0.0.tgz#69bd80c1ddd94f3758563fe107efb25fed85067a"
-  integrity sha512-n0iKSeiQpJCyaFh5JA0qsVLBIovsF4EIIR1G6XiBwKJN66ZrD4Oj62bjcuTAATPKiSp6an/2UZZxCf/67fk3sQ==
-  dependencies:
-    "@juggle/resize-observer" "^3.3.1"
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"

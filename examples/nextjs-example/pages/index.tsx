@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
 
 const DynamicComponentWithNoSSR = dynamic(
-  () => import('../../../build/index'),
+  () => import('react-variable-width-grid'),
   { ssr: false }
 );
 
