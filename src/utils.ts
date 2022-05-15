@@ -1,5 +1,5 @@
 export function determineNumColumns(width: number, sizes: number[], columnGap: number): number {
-  if (!sizes || !sizes.length) {
+  if (!width || !sizes || !sizes.length) {
     return 0;
   }
   let numColumns = sizes.length;
