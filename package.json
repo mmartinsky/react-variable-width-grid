@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "build:watch": "rollup -c --watch",
     "test": "jest",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 6006",
@@ -27,12 +28,13 @@
   ],
   "author": "Michael Martinsky",
   "license": "MIT",
+  "sideEffects": "false",
   "bugs": {
     "url": "https://github.com/mmartinsky/variable-width-grid/issues"
   },
   "homepage": "https://github.com/mmartinsky/variable-width-grid#readme",
   "dependencies": {
-    "@rehooks/component-size": "^1.0.3"
+    "use-resize-observer": "^8.0.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -56,6 +58,7 @@
     "rollup": "^2.39.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-size-snapshot": "^0.12.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "source-map-loader": "^2.0.1",
     "ts-loader": "^8.0.17",
