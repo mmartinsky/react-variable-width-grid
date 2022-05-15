@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { determineNumColumns } from "./utils";
-import useResizeObserver from "use-resize-observer";
+import useSize from "@react-hook/size";
 
 export type VariableWidthGridProps = {
   children: React.ReactNode;
@@ -10,8 +10,8 @@ export type VariableWidthGridProps = {
 
 export function VariableWidthGrid(props: VariableWidthGridProps) {
   const { children, columnGap = 10, style, ...otherProps } = props;
-  const ref = useRef<any>(null);
-  const {width} = useResizeObserver({ref})
+  const ref = useRef<any>();
+  const [width] = useSize(ref)
   const [sizes, setSizes] = React.useState<number[]>([]);
 
   React.useEffect(() => {
