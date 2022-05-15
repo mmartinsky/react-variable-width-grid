@@ -1,6 +1,6 @@
 {
   "name": "react-variable-width-grid",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Responsively align a grid of dynamically sized content",
   "main": "build/index.js",
   "module": "build/index.es.js",
