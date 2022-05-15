@@ -1,17 +1,18 @@
 import React, { useRef } from "react";
-import useComponentSize from "@rehooks/component-size";
 import { determineNumColumns } from "./utils";
+import useResizeObserver from "use-resize-observer";
 
 export type VariableWidthGridProps = {
-  children: any;
+  children: React.ReactNode;
   columnGap?: number;
+  style?: React.CSSProperties
 };
 
 export function VariableWidthGrid(props: VariableWidthGridProps) {
-  const { children, columnGap = 10 } = props;
-  const ref = useRef(null);
-  const { width } = useComponentSize(ref);
-  const [sizes, setSizes] = React.useState([]);
+  const { children, columnGap = 10, style, ...otherProps } = props;
+  const ref = useRef<any>(null);
+  const {width} = useResizeObserver({ref})
+  const [sizes, setSizes] = React.useState<number[]>([]);
 
   React.useEffect(() => {
     if (ref.current) {
@@ -25,12 +26,16 @@ export function VariableWidthGrid(props: VariableWidthGridProps) {
 
   return (
     <div
+      data-rvwg="rvwg"
       ref={ref}
       style={{
+        width: '100%',
         display: "grid",
         gridTemplateColumns: `repeat(${numColumns || React.Children.count(children)}, max-content)`,
         gridColumnGap: `${columnGap}px`,
+        ...style
       }}
+      {...otherProps}
     >
       {children}
     </div>
